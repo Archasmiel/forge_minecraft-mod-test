@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "lightandgloom:copper_ore"
+  },
+  "result": "lightandgloom:copper_ingot",
+  "experience": 5.0,
+  "cookingtime": 60
+}

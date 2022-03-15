@@ -1,0 +1,9 @@
+{
+  "itemGroup.Light and Gloom": "Light and Gloom",
+
+  "item.lightandgloom.copper_ingot": "Медный слиток",
+  "item.lightandgloom.copper_wire": "Медная проволока",
+
+  "block.lightandgloom.copper_block": "Медный блок",
+  "block.lightandgloom.copper_ore": "Медная руда"
+}

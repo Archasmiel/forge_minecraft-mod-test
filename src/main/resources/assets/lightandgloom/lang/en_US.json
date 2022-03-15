@@ -1,0 +1,9 @@
+{
+  "itemGroup.Light and Gloom": "Light and Gloom",
+
+  "item.lightandgloom.copper_ingot": "Copper Ingot",
+  "item.lightandgloom.copper_wire": "Copper Wire",
+
+  "block.lightandgloom.copper_block": "Copper Block",
+  "block.lightandgloom.copper_ore": "Copper Ore"
+}

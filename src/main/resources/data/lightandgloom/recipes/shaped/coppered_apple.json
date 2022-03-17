@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "lightandgloom:copper_ingot"
+    },
+    "b": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "lightandgloom:coppered_apple"
+  }
+}

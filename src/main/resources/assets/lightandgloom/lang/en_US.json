@@ -3,7 +3,14 @@
 
   "item.lightandgloom.copper_ingot": "Copper Ingot",
   "item.lightandgloom.copper_wire": "Copper Wire",
+  "item.lightandgloom.coppered_apple": "Coppered Apple",
 
   "block.lightandgloom.copper_block": "Copper Block",
-  "block.lightandgloom.copper_ore": "Copper Ore"
+  "block.lightandgloom.copper_ore": "Copper Ore",
+
+  "item.lightandgloom.copper_shovel": "Copper Shovel",
+  "item.lightandgloom.copper_axe": "Copper Axe",
+  "item.lightandgloom.copper_pickaxe": "Copper Pickaxe",
+  "item.lightandgloom.copper_hoe": "Copper Hoe",
+  "item.lightandgloom.copper_sword": "Copper Sword"
 }

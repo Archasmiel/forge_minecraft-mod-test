@@ -1,6 +1,7 @@
 package com.archasmiel.lightandgloom;
 
 import com.archasmiel.lightandgloom.block.ModBlocks;
+import com.archasmiel.lightandgloom.events.ModEvents;
 import com.archasmiel.lightandgloom.item.ModItems;
 import com.archasmiel.lightandgloom.util.Registration;
 import net.minecraft.block.Block;
@@ -34,7 +35,7 @@ public class LightAndGloomMod
 
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.COPPER_WIRE.get());
+            return new ItemStack(ModItems.COPPERED_APPLE.get());
         }
 
     };
@@ -43,11 +44,14 @@ public class LightAndGloomMod
     private static final Logger LOGGER = LogManager.getLogger();
 
     public LightAndGloomMod() {
+        IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         Registration.register();
         ModItems.register();
         ModBlocks.register();
+
+        forgeEventBus.register(new ModEvents());
 
         // Register the setup method for modloading
         modEventBus.addListener(this::setup);
@@ -91,7 +95,7 @@ public class LightAndGloomMod
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        LOGGER.info("Light and Gloom >> Hello stranger.");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
@@ -101,7 +105,7 @@ public class LightAndGloomMod
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
-            LOGGER.info("HELLO from Register Block");
+            LOGGER.info("Registred {}", blockRegistryEvent.getName().toString());
         }
     }
 }

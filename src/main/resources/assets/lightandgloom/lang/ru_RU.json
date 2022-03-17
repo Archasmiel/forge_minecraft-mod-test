@@ -3,7 +3,14 @@
 
   "item.lightandgloom.copper_ingot": "Медный слиток",
   "item.lightandgloom.copper_wire": "Медная проволока",
+  "item.lightandgloom.coppered_apple": "Медное яблоко",
 
   "block.lightandgloom.copper_block": "Медный блок",
-  "block.lightandgloom.copper_ore": "Медная руда"
+  "block.lightandgloom.copper_ore": "Медная руда",
+
+  "item.lightandgloom.copper_shovel": "Медная лопата",
+  "item.lightandgloom.copper_axe": "Медный топор",
+  "item.lightandgloom.copper_pickaxe": "Медная кирка",
+  "item.lightandgloom.copper_hoe": "Медная мотыга",
+  "item.lightandgloom.copper_sword": "Медный меч"
 }

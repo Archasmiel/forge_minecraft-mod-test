@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "lightandgloom:copper_ingot"
+    },
+    "b": {
+      "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "item": "lightandgloom:coppered_coal",
+    "count": 4
+  }
+}

@@ -1,7 +1,7 @@
-package com.archasmiel.lightandgloom.item.tools;
+package com.archasmiel.lightandgloom.item.tool.copper;
 
 import com.archasmiel.lightandgloom.LightAndGloomMod;
-import com.archasmiel.lightandgloom.item.ModItemTier;
+import com.archasmiel.lightandgloom.util.ModItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ShovelItem;
 import net.minecraftforge.common.ToolType;

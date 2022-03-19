@@ -1,20 +1,20 @@
-package com.archasmiel.lightandgloom.item.tools;
+package com.archasmiel.lightandgloom.item.tool.copper;
 
 import com.archasmiel.lightandgloom.LightAndGloomMod;
-import com.archasmiel.lightandgloom.item.ModItemTier;
-import net.minecraft.item.PickaxeItem;
+import com.archasmiel.lightandgloom.util.ModItemTier;
+import net.minecraft.item.AxeItem;
 import net.minecraftforge.common.ToolType;
 
-public class CopperPickaxe extends PickaxeItem {
+public class CopperAxe extends AxeItem {
 
-    public CopperPickaxe() {
+    public CopperAxe() {
         super(
                 ModItemTier.COPPER,
-                3,
+                0f,
                 0f,
                 new Properties()
                 .defaultDurability(ModItemTier.COPPER.getUses())
-                .addToolType(ToolType.PICKAXE, ModItemTier.COPPER.getLevel())
+                .addToolType(ToolType.AXE, ModItemTier.COPPER.getLevel())
                 .tab(LightAndGloomMod.MOD_TAB)
         );
 

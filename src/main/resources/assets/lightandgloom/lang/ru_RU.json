@@ -5,6 +5,8 @@
   "item.lightandgloom.copper_wire": "Медная проволока",
   "item.lightandgloom.coppered_apple": "Медное яблоко",
 
+  "item.lightandgloom.coppered_coal": "Омеднённый уголь",
+
   "block.lightandgloom.copper_block": "Медный блок",
   "block.lightandgloom.copper_ore": "Медная руда",
 
@@ -12,5 +14,10 @@
   "item.lightandgloom.copper_axe": "Медный топор",
   "item.lightandgloom.copper_pickaxe": "Медная кирка",
   "item.lightandgloom.copper_hoe": "Медная мотыга",
-  "item.lightandgloom.copper_sword": "Медный меч"
+  "item.lightandgloom.copper_sword": "Медный меч",
+
+  "item.lightandgloom.copper_helmet": "Медный шлем",
+  "item.lightandgloom.copper_chestplate": "Медный нагрудник",
+  "item.lightandgloom.copper_leggings": "Медные поножи",
+  "item.lightandgloom.copper_boots": "Медные ботинки"
 }

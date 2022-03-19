@@ -1,7 +1,9 @@
 package com.archasmiel.lightandgloom.item.food;
 
 import com.archasmiel.lightandgloom.LightAndGloomMod;
+import com.archasmiel.lightandgloom.util.Config;
 import com.archasmiel.lightandgloom.util.KeyboardHandler;
+import com.archasmiel.lightandgloom.util.TooltipHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -10,6 +12,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -28,8 +31,8 @@ public class CopperedApple extends Item
                     .effect(
                             () -> new EffectInstance(
                                     Effects.DIG_SPEED,
-                                    1000,
-                                    1
+                                    Config.COPPERED_HASTE_DURATION.get(),
+                                    Config.COPPERED_HASTE_POWER.get()
                             ),
                             1f
                     )
@@ -43,9 +46,15 @@ public class CopperedApple extends Item
     public void appendHoverText(ItemStack stack, World world,
                                 List<ITextComponent> tooltip, ITooltipFlag flag) {
         if (KeyboardHandler.isHoldingShift()){
-            tooltip.add(new StringTextComponent("Turns sheep into copper wires if hit with apple and killed."));
+            tooltip.add(TooltipHandler.getCtrlHelp("Turns sheep into copper wires if hit with apple and killed."));
         } else {
-            tooltip.add(new StringTextComponent("\u00A77" + "Hold " + "\u00A7e" + "[SHIFT]" + "\u00A77" + " for more information."));
+            tooltip.add(TooltipHandler.shiftHelp);
+        }
+
+        if (KeyboardHandler.isHoldingCtrl()){
+            tooltip.add(TooltipHandler.getCtrlHelp("Gives haste effect on eating."));
+        } else {
+            tooltip.add(TooltipHandler.ctrlHelp);
         }
         super.appendHoverText(stack, world, tooltip, flag);
     }

@@ -5,6 +5,8 @@
   "item.lightandgloom.copper_wire": "Copper Wire",
   "item.lightandgloom.coppered_apple": "Coppered Apple",
 
+  "item.lightandgloom.coppered_coal": "Coppered Coal",
+
   "block.lightandgloom.copper_block": "Copper Block",
   "block.lightandgloom.copper_ore": "Copper Ore",
 
@@ -12,5 +14,10 @@
   "item.lightandgloom.copper_axe": "Copper Axe",
   "item.lightandgloom.copper_pickaxe": "Copper Pickaxe",
   "item.lightandgloom.copper_hoe": "Copper Hoe",
-  "item.lightandgloom.copper_sword": "Copper Sword"
+  "item.lightandgloom.copper_sword": "Copper Sword",
+
+  "item.lightandgloom.copper_helmet": "Copper Helmet",
+  "item.lightandgloom.copper_chestplate": "Copper Chestplate",
+  "item.lightandgloom.copper_leggings": "Copper Leggings",
+  "item.lightandgloom.copper_boots": "Copper Boots"
 }

@@ -1,4 +1,4 @@
-package com.archasmiel.lightandgloom.item;
+package com.archasmiel.lightandgloom.util;
 
 import com.archasmiel.lightandgloom.item.ModItems;
 import net.minecraft.item.IItemTier;

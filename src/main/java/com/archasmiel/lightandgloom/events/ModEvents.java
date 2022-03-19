@@ -1,6 +1,7 @@
 package com.archasmiel.lightandgloom.events;
 
 import com.archasmiel.lightandgloom.item.ModItems;
+import com.archasmiel.lightandgloom.util.Config;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.passive.SheepEntity;
@@ -8,16 +9,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
-import net.minecraftforge.client.event.GuiOpenEvent;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
-import net.minecraftforge.event.village.VillagerTradesEvent;
-import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 
@@ -35,12 +32,13 @@ public class ModEvents {
 
                     player.getMainHandItem().shrink(1);
 
-                    target.addEffect(new EffectInstance(Effects.GLOWING, 600));
+                    target.addEffect(new EffectInstance(Effects.GLOWING, Config.COPPERED_GLOW_DURATION.get()));
 
-                    String msg = TextFormatting.YELLOW + "Sheep is now glowing!";
-                    if (!player.level.isClientSide()) {
-
-                        player.sendMessage(new StringTextComponent(msg), player.getUUID());
+                    if (player.level.isClientSide()) {
+                        player.sendMessage(
+                                new StringTextComponent(TextFormatting.YELLOW + "Sheep is now glowing!"),
+                                player.getUUID()
+                        );
                     }
                 }
             }
@@ -71,21 +69,16 @@ public class ModEvents {
         }
     }
 
-    /*
     @SubscribeEvent
-    public void eventG(BlockEvent blockEvent){
-        BlockPos blockPos = blockEvent.getPos();
-
-        if (blockPos.getY() == 0){
-            if (blockEvent.getWorld().isEmptyBlock(blockPos)) {
-                LogManager.getLogger().debug("Destroyed block at [" + blockPos.getX() + "," + blockPos.getY() + "," + blockPos.getZ() + "]");
-            } else {
-                LogManager.getLogger().debug("Set block at [" + blockPos.getX() + "," + blockPos.getY() + "," + blockPos.getZ() + "]");
-            }
-
+    public void onJoin(EntityJoinWorldEvent event){
+        if (event.getEntity() instanceof PlayerEntity) {
+            PlayerEntity player = (PlayerEntity) event.getEntity();
+            player.sendMessage(
+                    new StringTextComponent("Hello %p!".replace("%p", player.getName().getString())),
+                    player.getUUID()
+            );
         }
     }
-    */
 
 
 }

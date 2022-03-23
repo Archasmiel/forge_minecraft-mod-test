@@ -1,14 +1,14 @@
-package com.archasmiel.lightandgloom.item;
+package com.archasmiel.lightandgloom.init;
 
-import com.archasmiel.lightandgloom.LightAndGloomMod;
+import com.archasmiel.lightandgloom.LightAndGloom;
 import com.archasmiel.lightandgloom.item.armor.copper.CopperBoots;
 import com.archasmiel.lightandgloom.item.armor.copper.CopperChestplate;
 import com.archasmiel.lightandgloom.item.armor.copper.CopperHelmet;
 import com.archasmiel.lightandgloom.item.armor.copper.CopperLeggings;
 import com.archasmiel.lightandgloom.item.food.CopperedApple;
-import com.archasmiel.lightandgloom.item.fuel.CopperedCoal;
-import com.archasmiel.lightandgloom.item.material.CopperIngot;
-import com.archasmiel.lightandgloom.item.material.CopperWire;
+import com.archasmiel.lightandgloom.item.fuel.CoalFuel;
+import com.archasmiel.lightandgloom.item.material.Ingot;
+import com.archasmiel.lightandgloom.item.material.Wire;
 import com.archasmiel.lightandgloom.item.tool.copper.*;
 import com.archasmiel.lightandgloom.util.Registration;
 import net.minecraft.item.Item;
@@ -18,16 +18,16 @@ public class ModItems
 {
     /* TAB PREFAB */
     public static final Item.Properties usualItemTab
-            = new Item.Properties().tab(LightAndGloomMod.MOD_TAB);
+            = new Item.Properties().tab(LightAndGloom.MOD_TAB);
 
 
 
     /* MATERIALS */
     public static final RegistryObject<Item> COPPER_INGOT
-            = Registration.registerItem("copper_ingot", CopperIngot::new);
+            = Registration.registerItem("copper_ingot", Ingot::new);
 
     public static final RegistryObject<Item> COPPER_WIRE
-            = Registration.registerItem("copper_wire", CopperWire::new);
+            = Registration.registerItem("copper_wire", Wire::new);
 
 
 
@@ -39,7 +39,7 @@ public class ModItems
 
     /* FUEL */
     public static final RegistryObject<Item> COPPERED_COAL
-        = Registration.registerItem("coppered_coal", CopperedCoal::new);
+        = Registration.registerItem("coppered_coal", () -> new CoalFuel(32, 3200));
 
 
 
@@ -76,7 +76,5 @@ public class ModItems
 
 
 
-    public static void register() {
-
-    }
+    public static void register() {}
 }

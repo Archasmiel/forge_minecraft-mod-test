@@ -1,6 +1,6 @@
 package com.archasmiel.lightandgloom.item.tool.copper;
 
-import com.archasmiel.lightandgloom.LightAndGloomMod;
+import com.archasmiel.lightandgloom.LightAndGloom;
 import com.archasmiel.lightandgloom.util.ModItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ShovelItem;
@@ -16,7 +16,7 @@ public class CopperShovel extends ShovelItem {
                 new Item.Properties()
                 .defaultDurability(ModItemTier.COPPER.getUses())
                 .addToolType(ToolType.SHOVEL, ModItemTier.COPPER.getLevel())
-                .tab(LightAndGloomMod.MOD_TAB)
+                .tab(LightAndGloom.MOD_TAB)
         );
 
 

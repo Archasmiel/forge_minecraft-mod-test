@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "lightandgloom:block/random_ore" }
+  }
+}

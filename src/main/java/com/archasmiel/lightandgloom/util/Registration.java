@@ -1,6 +1,6 @@
 package com.archasmiel.lightandgloom.util;
 
-import com.archasmiel.lightandgloom.LightAndGloomMod;
+import com.archasmiel.lightandgloom.LightAndGloom;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -16,10 +16,10 @@ public class Registration
 {
 
     public static final DeferredRegister<Block> BLOCKS
-            = DeferredRegister.create(ForgeRegistries.BLOCKS, LightAndGloomMod.MOD_ID);
+            = DeferredRegister.create(ForgeRegistries.BLOCKS, LightAndGloom.MOD_ID);
 
     public static final DeferredRegister<Item> ITEMS
-            = DeferredRegister.create(ForgeRegistries.ITEMS, LightAndGloomMod.MOD_ID);
+            = DeferredRegister.create(ForgeRegistries.ITEMS, LightAndGloom.MOD_ID);
 
     public static void register() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -33,7 +33,7 @@ public class Registration
                 name,
                 () -> new BlockItem(
                         toReturn.get(),
-                        new Item.Properties().tab(LightAndGloomMod.MOD_TAB)
+                        new Item.Properties().tab(LightAndGloom.MOD_TAB)
                 )
         );
         return toReturn;

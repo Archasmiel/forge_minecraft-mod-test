@@ -1,8 +1,9 @@
 package com.archasmiel.lightandgloom;
 
-import com.archasmiel.lightandgloom.block.ModBlocks;
+import com.archasmiel.lightandgloom.init.ModBlocks;
 import com.archasmiel.lightandgloom.events.ModEvents;
-import com.archasmiel.lightandgloom.item.ModItems;
+import com.archasmiel.lightandgloom.init.ModItems;
+import com.archasmiel.lightandgloom.init.ModTab;
 import com.archasmiel.lightandgloom.util.Config;
 import com.archasmiel.lightandgloom.util.Registration;
 import net.minecraft.block.Block;
@@ -30,24 +31,16 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(LightAndGloomMod.MOD_ID)
-public class LightAndGloomMod
+@Mod(LightAndGloom.MOD_ID)
+public class LightAndGloom
 {
     public static final String MOD_ID = "lightandgloom";
+    public static final String MOD_NAME = "Light and Gloom";
+    public static final ItemGroup MOD_TAB = new ModTab(MOD_NAME);
 
-    public static final ItemGroup MOD_TAB = new ItemGroup("Light and Gloom") {
-
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(ModItems.COPPERED_APPLE.get());
-        }
-
-    };
-
-    // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public LightAndGloomMod() {
+    public LightAndGloom() {
         IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -63,13 +56,9 @@ public class LightAndGloomMod
 
         forgeEventBus.register(new ModEvents());
 
-        // Register the setup method for modloading
         modEventBus.addListener(this::setup);
-        // Register the enqueueIMC method for modloading
         modEventBus.addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
         modEventBus.addListener(this::processIMC);
-        // Register the doClientStuff method for modloading
         modEventBus.addListener(this::doClientStuff);
 
         Config.loadConfigFile(Config.CLIENT_CONFIG,

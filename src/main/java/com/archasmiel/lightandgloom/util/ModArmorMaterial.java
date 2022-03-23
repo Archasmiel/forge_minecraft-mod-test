@@ -1,7 +1,7 @@
 package com.archasmiel.lightandgloom.util;
 
-import com.archasmiel.lightandgloom.LightAndGloomMod;
-import com.archasmiel.lightandgloom.item.ModItems;
+import com.archasmiel.lightandgloom.LightAndGloom;
+import com.archasmiel.lightandgloom.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ItemStack;
@@ -16,7 +16,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
             10,
             SoundEvents.ARMOR_EQUIP_IRON,
             Ingredient.of(new ItemStack(ModItems.COPPER_INGOT.get())),
-            LightAndGloomMod.MOD_ID + ":copper/copper",
+            LightAndGloom.MOD_ID + ":copper/copper",
             1f,
             0f
     );

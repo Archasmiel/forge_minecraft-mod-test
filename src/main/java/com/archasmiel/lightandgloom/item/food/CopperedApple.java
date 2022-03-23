@@ -1,6 +1,6 @@
 package com.archasmiel.lightandgloom.item.food;
 
-import com.archasmiel.lightandgloom.LightAndGloomMod;
+import com.archasmiel.lightandgloom.LightAndGloom;
 import com.archasmiel.lightandgloom.util.Config;
 import com.archasmiel.lightandgloom.util.KeyboardHandler;
 import com.archasmiel.lightandgloom.util.TooltipHandler;
@@ -11,11 +11,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
 import java.util.List;
 
 public class CopperedApple extends Item
@@ -24,7 +21,7 @@ public class CopperedApple extends Item
 
     public CopperedApple() {
         super(new Properties()
-            .tab(LightAndGloomMod.MOD_TAB)
+            .tab(LightAndGloom.MOD_TAB)
             .food(new Food.Builder()
                     .nutrition(4)
                     .saturationMod(1.5f)

@@ -1,11 +1,11 @@
 package com.archasmiel.lightandgloom.item.material;
 
-import com.archasmiel.lightandgloom.item.ModItems;
+import com.archasmiel.lightandgloom.init.ModItems;
 import net.minecraft.item.Item;
 
-public class CopperIngot extends Item {
+public class Ingot extends Item {
 
-    public CopperIngot() {
+    public Ingot() {
         super(ModItems.usualItemTab);
     }
 

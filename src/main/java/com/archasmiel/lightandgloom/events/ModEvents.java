@@ -1,6 +1,6 @@
 package com.archasmiel.lightandgloom.events;
 
-import com.archasmiel.lightandgloom.item.ModItems;
+import com.archasmiel.lightandgloom.init.ModItems;
 import com.archasmiel.lightandgloom.util.Config;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
@@ -73,10 +73,12 @@ public class ModEvents {
     public void onJoin(EntityJoinWorldEvent event){
         if (event.getEntity() instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) event.getEntity();
-            player.sendMessage(
-                    new StringTextComponent("Hello %p!".replace("%p", player.getName().getString())),
-                    player.getUUID()
-            );
+            World world = event.getWorld();
+            if (!world.isClientSide())
+                player.sendMessage(
+                        new StringTextComponent("Hello %p!".replace("%p", player.getName().getString())),
+                        player.getUUID()
+                );
         }
     }
 

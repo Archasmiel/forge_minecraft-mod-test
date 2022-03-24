@@ -1,6 +1,6 @@
-package com.archasmiel.lightandgloom.util;
+package com.archasmiel.lightandgloom.util.tier;
 
-import com.archasmiel.lightandgloom.init.ModItems;
+import com.archasmiel.lightandgloom.util.init.ModItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;

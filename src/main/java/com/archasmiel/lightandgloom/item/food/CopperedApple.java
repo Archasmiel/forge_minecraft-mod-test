@@ -3,7 +3,7 @@ package com.archasmiel.lightandgloom.item.food;
 import com.archasmiel.lightandgloom.LightAndGloom;
 import com.archasmiel.lightandgloom.util.Config;
 import com.archasmiel.lightandgloom.util.KeyboardHandler;
-import com.archasmiel.lightandgloom.util.TooltipHandler;
+import com.archasmiel.lightandgloom.util.text.TooltipHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;

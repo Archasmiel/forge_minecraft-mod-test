@@ -7,6 +7,11 @@
 
   "item.lightandgloom.coppered_coal": "Coppered Coal",
 
+  "block.lightandgloom.zuccini_crop": "Zuccini Crop",
+  "item.lightandgloom.zuccini_seed": "Zuccini Seed",
+
+  "item.lightandgloom.oil_bucket": "Oil Bucket",
+
   "block.lightandgloom.copper_block": "Copper Block",
   "block.lightandgloom.copper_ore": "Copper Ore",
   "block.lightandgloom.random_ore": "Random Ore",
@@ -20,5 +25,8 @@
   "item.lightandgloom.copper_helmet": "Copper Helmet",
   "item.lightandgloom.copper_chestplate": "Copper Chestplate",
   "item.lightandgloom.copper_leggings": "Copper Leggings",
-  "item.lightandgloom.copper_boots": "Copper Boots"
+  "item.lightandgloom.copper_boots": "Copper Boots",
+
+  "block.lightandgloom.arcane_workbench": "Arcane Workbench",
+  "screen.lightandgloom.arcane_workbench_name": "Arcane Workbench"
 }

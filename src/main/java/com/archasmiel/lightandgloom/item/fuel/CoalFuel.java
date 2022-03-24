@@ -1,6 +1,6 @@
 package com.archasmiel.lightandgloom.item.fuel;
 
-import com.archasmiel.lightandgloom.init.ModItems;
+import com.archasmiel.lightandgloom.util.init.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 

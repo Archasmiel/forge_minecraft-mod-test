@@ -2,14 +2,19 @@ package com.archasmiel.lightandgloom.util;
 
 import com.archasmiel.lightandgloom.LightAndGloom;
 import net.minecraft.block.Block;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.awt.*;
+import java.lang.reflect.Type;
 import java.util.function.Supplier;
 
 public class Registration
@@ -21,25 +26,22 @@ public class Registration
     public static final DeferredRegister<Item> ITEMS
             = DeferredRegister.create(ForgeRegistries.ITEMS, LightAndGloom.MOD_ID);
 
-    public static void register() {
+    public static final DeferredRegister<Fluid> FLUIDS
+            = DeferredRegister.create(ForgeRegistries.FLUIDS, LightAndGloom.MOD_ID);
+
+    public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES
+            = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, LightAndGloom.MOD_ID);
+
+    public static final DeferredRegister<ContainerType<?>> CONTAINERS
+            = DeferredRegister.create(ForgeRegistries.CONTAINERS, LightAndGloom.MOD_ID);
+
+    public static void init() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
+        FLUIDS.register(eventBus);
+        TILE_ENTITY_TYPES.register(eventBus);
+        CONTAINERS.register(eventBus);
     }
 
-    public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> blockProperties) {
-        RegistryObject<T> toReturn = Registration.BLOCKS.register(name, blockProperties);
-        Registration.ITEMS.register(
-                name,
-                () -> new BlockItem(
-                        toReturn.get(),
-                        new Item.Properties().tab(LightAndGloom.MOD_TAB)
-                )
-        );
-        return toReturn;
-    }
-
-    public static <T extends Item> RegistryObject<T> registerItem(String name, Supplier<T> itemProperties) {
-        return Registration.ITEMS.register(name, itemProperties);
-    }
 }

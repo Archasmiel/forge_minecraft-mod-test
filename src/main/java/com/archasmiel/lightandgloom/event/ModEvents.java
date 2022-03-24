@@ -1,6 +1,6 @@
-package com.archasmiel.lightandgloom.events;
+package com.archasmiel.lightandgloom.event;
 
-import com.archasmiel.lightandgloom.init.ModItems;
+import com.archasmiel.lightandgloom.util.init.ModItems;
 import com.archasmiel.lightandgloom.util.Config;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;

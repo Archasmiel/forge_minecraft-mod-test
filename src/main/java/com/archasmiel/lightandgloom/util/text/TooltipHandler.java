@@ -1,4 +1,4 @@
-package com.archasmiel.lightandgloom.util;
+package com.archasmiel.lightandgloom.util.text;
 
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;

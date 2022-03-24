@@ -1,4 +1,4 @@
-package com.archasmiel.lightandgloom.init;
+package com.archasmiel.lightandgloom.util.init;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

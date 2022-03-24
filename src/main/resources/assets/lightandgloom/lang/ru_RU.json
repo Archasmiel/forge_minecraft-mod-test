@@ -7,6 +7,11 @@
 
   "item.lightandgloom.coppered_coal": "Омеднённый уголь",
 
+  "block.lightandgloom.zuccini_crop": "Растение цуккини",
+  "item.lightandgloom.zuccini_seed": "Семена цуккини",
+
+  "item.lightandgloom.oil_bucket": "Ведро с маслом",
+
   "block.lightandgloom.copper_block": "Медный блок",
   "block.lightandgloom.copper_ore": "Медная руда",
   "block.lightandgloom.random_ore": "Рандомная руда",
@@ -20,5 +25,8 @@
   "item.lightandgloom.copper_helmet": "Медный шлем",
   "item.lightandgloom.copper_chestplate": "Медный нагрудник",
   "item.lightandgloom.copper_leggings": "Медные поножи",
-  "item.lightandgloom.copper_boots": "Медные ботинки"
+  "item.lightandgloom.copper_boots": "Медные ботинки",
+
+  "block.lightandgloom.arcane_workbench": "Магический верстак",
+  "screen.lightandgloom.arcane_workbench_name": "Магический верстак"
 }
